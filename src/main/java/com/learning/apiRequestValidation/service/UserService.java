@@ -24,7 +24,7 @@ public class UserService {
                 userRequest.getGender(),
                 userRequest.getMobile(),
                 userRequest.getNationality(),
-                userRequest.getEmail());
+                userRequest.getEmail(),userRequest.getUserType());
         userRepo.save(user);
         log.info(user.toString());
         return user;

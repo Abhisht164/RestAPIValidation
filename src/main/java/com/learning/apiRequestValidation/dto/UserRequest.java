@@ -1,5 +1,6 @@
 package com.learning.apiRequestValidation.dto;
 
+import com.learning.apiRequestValidation.validator.ValidateUserType;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,4 +22,7 @@ public class UserRequest {
     private String age;
     @NotBlank
     private String nationality;
+
+    @ValidateUserType(message = "Invalid User")
+    private String userType;
 }
